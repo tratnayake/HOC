@@ -1,13 +1,17 @@
+//Import required modules
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, browserHistory } from 'react-router';
 
-import requireAuth from './components/require_authentication';
+//Import Components
 import App from './components/app';
-import reducers from './reducers';
 import Resources from './components/resources'
+//Import Reducers (state)
+import reducers from './reducers';
+//Import Higher Order Components(HOC's)
+import requireAuth from './components/require_authentication';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 

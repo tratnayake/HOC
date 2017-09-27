@@ -3,12 +3,32 @@ import { connect } from 'react-redux';
 
 export default function(ComposedComponent){
   class Authentication extends Component{
+    //We need to specify exactly which component we are picking out from the
+    //parent context.
+    static contextTypes = {
+      router: React.PropTypes.object
+    }
+
+    //Run right before the component is rendered.
+    componentWillMount(){
+      if(!this.props.authenticated){
+        this.context.router.push('/');
+      }
+    }
+
+    //Run when the component is about to updated with state change.
+    componentWillUpdate(nextProps){
+      if(!nextProps.authenticated){
+        this.context.router.push('/');
+      }
+    }
+
     render(){
-      console.log(this.props.authenticated);
       return <ComposedComponent {...this.props} />
     }
   }
 
+  //Expose the state.authenticated variable to this component.
   function mapStateToProps(state){
     return { authenticated: state.authenticated };
   }

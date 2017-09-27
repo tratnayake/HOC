@@ -1,3 +1,4 @@
+//This is a functional (dumb) component.
 import React from 'react';
 
 export default () => {
