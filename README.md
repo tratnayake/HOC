@@ -1,3 +1,24 @@
+# Higher Order Components ( + React + Redux)
+
+Important to note:
+
+React - UI Manipulation
+Redux -  State Manipulation
+
+React-Redux = library that links the two together.
+
+Redux: Application STATE is defined by REDUCERS.
+
+React COMPONENTS take in PROPS through mapping the STATE to PROPS.
+
+Components (or anything) can emit ACTIONS which change the state via REDUCERS.
+
+
+
+
+Original Readme from boilerplate Project below.
+---
+
 # ReduxSimpleStarter
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?

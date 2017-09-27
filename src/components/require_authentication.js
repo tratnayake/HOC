@@ -1,3 +1,4 @@
+//This is a CLASS BASED component (SMART component) AND a HOC.
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
